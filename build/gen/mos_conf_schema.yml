@@ -1,0 +1,70 @@
+- - spi
+  - o
+  - title: SPI settings
+- - spi.enable
+  - b
+  - false
+  - title: Enable SPI
+- - spi.debug
+  - b
+  - false
+  - title: Debug SPI bus activity
+- - spi.miso_gpio
+  - i
+  - -1
+  - title: GPIO to use for MISO
+- - spi.mosi_gpio
+  - i
+  - -1
+  - title: GPIO to use for MOSI
+- - spi.sclk_gpio
+  - i
+  - -1
+  - title: GPIO to use for SCLK
+- - spi.cs0_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS0
+- - spi.cs1_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS1
+- - spi.cs2_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS2
+- - spi.miso_gpio
+  - 12
+- - spi.mosi_gpio
+  - 13
+- - spi.sclk_gpio
+  - 14
+- - spi.cs0_gpio
+  - 15
+- - i2c
+  - o
+  - title: I2C settings
+- - i2c.enable
+  - b
+  - false
+  - title: Enable I2C
+- - i2c.freq
+  - i
+  - 100000
+  - title: Clock frequency
+- - i2c.debug
+  - b
+  - false
+  - title: Debug I2C bus activity
+- - i2c.sda_gpio
+  - i
+  - 0
+  - title: GPIO to use for SDA
+- - i2c.scl_gpio
+  - i
+  - 0
+  - title: GPIO to use for SCL
+- - i2c.sda_gpio
+  - 12
+- - i2c.scl_gpio
+  - 14

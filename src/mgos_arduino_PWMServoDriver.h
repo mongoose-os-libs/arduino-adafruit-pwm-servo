@@ -12,7 +12,7 @@ extern "C"
 
 Adafruit_PWMServoDriver *mgos_PWMServoDriver_create();
 
-void mgos_PWMServoDrive_close(Adafruit_PWMServoDriver *ssd);
+void mgos_PWMServoDriver_close(Adafruit_PWMServoDriver *ssd);
 
 void mgos_PWMServoDriver_begin(Adafruit_PWMServoDriver *ssd);
 
