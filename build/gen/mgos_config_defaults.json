@@ -1,0 +1,46 @@
+{
+  "device": {
+    "id": "esp8266_??????", 
+    "password": ""
+  }, 
+  "debug": {
+    "udp_log_addr": "", 
+    "mbedtls_level": 0, 
+    "level": 2, 
+    "filter": "", 
+    "stdout_uart": 0, 
+    "stderr_uart": 0, 
+    "factory_reset_gpio": -1, 
+    "mg_mgr_hexdump_file": ""
+  }, 
+  "sys": {
+    "mount": {
+      "path": "", 
+      "dev_type": "", 
+      "dev_opts": "", 
+      "fs_type": "", 
+      "fs_opts": ""
+    }, 
+    "tz_spec": "", 
+    "wdt_timeout": 30, 
+    "pref_ota_lib": ""
+  }, 
+  "conf_acl": "*", 
+  "spi": {
+    "enable": false, 
+    "debug": false, 
+    "miso_gpio": 12, 
+    "mosi_gpio": 13, 
+    "sclk_gpio": 14, 
+    "cs0_gpio": 15, 
+    "cs1_gpio": -1, 
+    "cs2_gpio": -1
+  }, 
+  "i2c": {
+    "enable": false, 
+    "freq": 100000, 
+    "debug": false, 
+    "sda_gpio": 12, 
+    "scl_gpio": 14
+  }
+}

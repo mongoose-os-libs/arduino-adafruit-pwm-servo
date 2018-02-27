@@ -1,0 +1,146 @@
+name: arduino-adafruit-pwm-servo
+type: lib
+version: "1.0"
+platform: esp8266
+platforms:
+- esp32
+- esp8266
+author: djzxz
+description: Arduino Adafruit PWM servo library
+sources:
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/src/mgos_arduino_Adafruit_PWMServoDriver_c.c
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/src/Adafruit_PWMServoDriver.cpp
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/src/mgos_arduino_PWMServoDriver.cpp
+includes:
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-compat/include
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/spi/include
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-spi/include
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/i2c/include
+- /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-wire/include
+config_schema:
+- - spi
+  - o
+  - title: SPI settings
+- - spi.enable
+  - b
+  - false
+  - title: Enable SPI
+- - spi.debug
+  - b
+  - false
+  - title: Debug SPI bus activity
+- - spi.miso_gpio
+  - i
+  - -1
+  - title: GPIO to use for MISO
+- - spi.mosi_gpio
+  - i
+  - -1
+  - title: GPIO to use for MOSI
+- - spi.sclk_gpio
+  - i
+  - -1
+  - title: GPIO to use for SCLK
+- - spi.cs0_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS0
+- - spi.cs1_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS1
+- - spi.cs2_gpio
+  - i
+  - -1
+  - title: GPIO to use for CS2
+- - spi.miso_gpio
+  - 12
+- - spi.mosi_gpio
+  - 13
+- - spi.sclk_gpio
+  - 14
+- - spi.cs0_gpio
+  - 15
+- - i2c
+  - o
+  - title: I2C settings
+- - i2c.enable
+  - b
+  - false
+  - title: Enable I2C
+- - i2c.freq
+  - i
+  - 100000
+  - title: Clock frequency
+- - i2c.debug
+  - b
+  - false
+  - title: Debug I2C bus activity
+- - i2c.sda_gpio
+  - i
+  - 0
+  - title: GPIO to use for SDA
+- - i2c.scl_gpio
+  - i
+  - 0
+  - title: GPIO to use for SCL
+- - i2c.sda_gpio
+  - 12
+- - i2c.scl_gpio
+  - 14
+build_vars:
+  MGOS_ENABLE_I2C_GPIO: "1"
+  MGOS_ENABLE_SPI_GPIO: "1"
+  MGOS_HAVE_ARDUINO_COMPAT: "1"
+  MGOS_HAVE_ARDUINO_SPI: "1"
+  MGOS_HAVE_ARDUINO_WIRE: "1"
+  MGOS_HAVE_I2C: "1"
+  MGOS_HAVE_SPI: "1"
+cdefs:
+  ARDUINO: "150"
+  ESP8266: "1"
+  F_CPU: "160000000"
+  MGOS_HAVE_ARDUINO_COMPAT: "1"
+  MGOS_HAVE_ARDUINO_SPI: "1"
+  MGOS_HAVE_ARDUINO_WIRE: "1"
+  MGOS_HAVE_I2C: "1"
+  MGOS_HAVE_SPI: "1"
+tags:
+- arduino
+- c
+- js
+- hw
+libs_version: "1.24"
+modules_version: "1.24"
+mongoose_os_version: "1.24"
+manifest_version: 2017-05-18
+skeleton_version: 2017-05-18
+libs_handled:
+- name: arduino-compat
+  path: /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-compat
+  sources:
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-compat/src
+- name: spi
+  path: /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/spi
+  sources:
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/spi/src
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/spi/src/common_gpio
+- name: arduino-spi
+  path: /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-spi
+  deps:
+  - arduino-compat
+  - spi
+  sources:
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-spi/src
+- name: i2c
+  path: /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/i2c
+  sources:
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/i2c/src
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/i2c/src/common_gpio
+- name: arduino-wire
+  path: /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-wire
+  deps:
+  - arduino-compat
+  - i2c
+  sources:
+  - /fwbuild-volumes/1.24/apps/arduino-adafruit-pwm-servo/esp8266/build_contexts/build_ctx_376334289/libs/arduino-wire/src
